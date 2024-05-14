@@ -7,10 +7,10 @@ const PORT = 3000;
 
 // Configuração do banco de dados
 const config = {
-    user: 'mfunes',
-    password: 'Azure123@',
-    server: 'fatec-franca.database.windows.net',
-    database: 'empresa',
+    user: 'samuel',
+    password: 'Srf#231104',
+    server: 'samuca.database.windows.net',
+    database: 'samuel',
     options: {
         encrypt: true // Dependendo da configuração do seu servidor SQL Server
     }

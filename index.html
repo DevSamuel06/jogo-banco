@@ -10,25 +10,58 @@
 
 <body>
     <div id="app">
-        <div class="personagem">
-            <div class="barra-vida" :style="{width: heroi.vida + '%'}">{{ heroi.vida }}%</div>
-            <div class="sprite">Figura do personagem</div>
-            <h1>Herói</h1>
-            <div class="acoes">
-                <button @click="atacar(true)">Atacar</button>
-                <button @click="defender(true)">Defender</button>
-                <button @click="pocao(true)">Usar Poção</button>
-                <button @click="correr(true)">Correr</button>
+        <div class="container">
+            <div class="card">
+                <h2>Cavaleiro</h2>
+                <img src="./img/cavaleiro.png" class="character">
+                <div class="health-bar" :style="{width: hero.life + '%'}">
+                    <p v-if="hero.life < 0">
+                        Dead
+                    </p>
+                    <p v-else class="health-bar" :class="getHealthBarClass(hero)">
+                        {{hero.life}}
+                    </p>
+                </div>
+                <div class="actions">
+                    <button @click="atacar(true)">Atacar</button>
+                    <button @click="defender(true)">Defender</button>
+                    <button :disabled="potionAmount < 1" @click="usarPocao(true)">
+                        Usar Poção <span class="badge">{{ potionAmount }}</span>
+                    </button>
+                    <button @click="correr(true)">Correr</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Dragão</h2>
+                <img src="./img/dragao.png" class="character">
+                <div class="health-bar" :style="{width: enemy.life + '%'}">
+                    <p v-if="enemy.life < 0" >
+                        Dead
+                    </p>
+                    <p v-else  class="health-bar" :class="getHealthBarClass(enemy)">
+                        {{enemy.life}}
+                    </p>
+                </div>
             </div>
         </div>
-
-        <div class="personagem">
-            <div class="barra-vida" :style="{width: vilao.vida + '%'}">{{ vilao.vida }}%</div>
-            <div class="sprite">Figura do personagem</div>
-            <h1>Vilão</h1>
-            <button onclick="window.open('dashboard.html','_blank')">Dashboard</button>
-        </div>        
+        
+        <div class="log-box">
+            <div>
+                <h3>Log de jogo</h3>
+                <ul style="max-width: 200px;">
+                    <li v-for="log in battleLog" :key="log">{{ log }}</li>
+                </ul>
+            </div>
+    
+            <div class="winner-box" v-if="isGameOver">
+                <h2 v-if="winner">{{ winner }} venceu!</h2>
+                <button @click="reiniciarJogo" class="button">Reiniciar Jogo</button>
+            </div>
+        </div>
+    
+    
     </div>
+    
 </body>
 
 </html>
