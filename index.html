@@ -52,13 +52,18 @@
                     <li v-for="log in battleLog" :key="log">{{ log }}</li>
                 </ul>
             </div>
-    
+
             <div class="winner-box" v-if="isGameOver">
                 <h2 v-if="winner">{{ winner }} venceu!</h2>
                 <button @click="reiniciarJogo" class="button">Reiniciar Jogo</button>
             </div>
+
+            <div>
+                <a href="./dashboard.html"><button class="button2">Dashboard</button></a>
+            </div>
+
         </div>
-    
+        
     
     </div>
     

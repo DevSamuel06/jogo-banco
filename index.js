@@ -35,7 +35,6 @@ createApp({
                         this.winner = 'Cavaleiro';
                         this.adicionarAoLog('O Dragão foi derrotado! Você venceu!');
                     } else {
-                        this.atualizarVidaNoBancoDeDados(this.hero.life, this.enemy.life); // Chamada do método aqui
                         this.acaoVilao();
                     }
                 } else {
@@ -56,7 +55,6 @@ createApp({
                 }
             }
         },
-
         acaoVilao() {
             const actions = ['atacar', 'defender', 'usarPocao'];
             const randomAction = actions[Math.floor(Math.random() * actions.length)];
@@ -113,12 +111,12 @@ createApp({
 
 
     },
-    
     computed: {
         isGameOver() {
             return this.hero.life <= 0 || this.enemy.life <= 0 || this.winner;
         },
     },
+
 
     async atualizarVidaNoBancoDeDados(vidaHeroi, vidaVilao) {
         try {

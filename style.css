@@ -76,6 +76,7 @@ body, html {
     display: flex;
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
 }
 
 .log-box h3 {
@@ -86,13 +87,14 @@ body, html {
     padding-left: 20px;
 }
 
+
 .winner-box {
     background-color: rgba(255, 255, 255, 0);
     color: rgb(43, 37, 37);
     padding: 0px;
     border-radius: 5px;
     margin-top: 0px;
-    margin-left: 350px;
+    text-align: center;
 }
 
 .winner-box h2 {
@@ -105,7 +107,7 @@ body, html {
     background-color: #505253;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 14px;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
@@ -113,6 +115,22 @@ body, html {
 
 .button:hover {
     background-color: #8f9294;
+}
+
+.button2{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2f8ab8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #80aecc;
 }
 
 .green {
