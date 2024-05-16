@@ -15,6 +15,10 @@ createApp({
         };
     },
 
+    mounted() {
+        this.atualizarVidaNoBancoDeDados(this.hero.life, this.enemy.life);
+    },
+
     methods: {
 
         adicionarAoLog(mensagem) {
@@ -35,6 +39,7 @@ createApp({
                         this.winner = 'Cavaleiro';
                         this.adicionarAoLog('O Dragão foi derrotado! Você venceu!');
                     } else {
+                        this.atualizarVidaNoBancoDeDados(this.hero.life, this.enemy.life);
                         this.acaoVilao();
                     }
                 } else {
@@ -71,11 +76,13 @@ createApp({
                 this.hero.life += 50;
                 this.hero.life = Math.min(100, this.hero.life);
                 this.adicionarAoLog('Cavaleiro usa uma poção, curando 50 pontos!');
+                this.atualizarVidaNoBancoDeDados(this.hero.life, this.enemy.life);
             } else if (!isHero && this.enemyPotionAmount > 0 && this.enemy.life < 100) {
                 this.enemyPotionAmount--;
                 this.enemy.life += 50;
                 this.enemy.life = Math.min(100, this.enemy.life);
                 this.adicionarAoLog('Dragão usa uma poção, curando 50 pontos!');
+                this.atualizarVidaNoBancoDeDados(this.hero.life, this.enemy.li);
             } else {
                 this.adicionarAoLog(isHero ? 'Cavaleiro está com a vida cheia ou sem poções!' : 'Dragão está com a vida cheia ou sem poções!');
             }
@@ -91,6 +98,7 @@ createApp({
             this.enemyPotionAmount = 3;
             this.winner = null;
             this.battleLog = [];
+            this.atualizarVidaNoBancoDeDados(this.hero.life, this.enemy.life);
         },
 
         getHealthBarClass(character) {
