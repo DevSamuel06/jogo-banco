@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+const API_URL = 'http://localhost:3000';
 
 createApp({
     data() {
@@ -14,24 +15,6 @@ createApp({
         };
     },
 
-    async atualizarVidaNoBancoDeDados(vidaHeroi, vidaVilao) {
-        try {
-            const response = await fetch(`${API_URL}/atualizarVida`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ vidaHeroi, vidaVilao })
-            });
-            if (!response.ok) {
-                throw new Error('Erro ao atualizar a vida no banco de dados.');
-            }
-            console.log('Vida do herói e do vilão atualizada com sucesso.');
-        } catch (error) {
-            console.error('Erro ao atualizar a vida no banco de dados:', error);
-        }
-    },
-    
     methods: {
 
         adicionarAoLog(mensagem) {
@@ -73,6 +56,7 @@ createApp({
                 }
             }
         },
+
         acaoVilao() {
             const actions = ['atacar', 'defender', 'usarPocao'];
             const randomAction = actions[Math.floor(Math.random() * actions.length)];
@@ -129,9 +113,29 @@ createApp({
 
 
     },
+    
     computed: {
         isGameOver() {
             return this.hero.life <= 0 || this.enemy.life <= 0 || this.winner;
         },
     },
+
+    async atualizarVidaNoBancoDeDados(vidaHeroi, vidaVilao) {
+        try {
+            const response = await fetch(`${API_URL}/atualizarVida`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ vidaHeroi, vidaVilao })
+            });
+            if (!response.ok) {
+                throw new Error('Erro ao atualizar a vida no banco de dados.');
+            }
+            console.log('Vida do herói e do vilão atualizada com sucesso.');
+        } catch (error) {
+            console.error('Erro ao atualizar a vida no banco de dados:', error);
+        }
+    },
+
 }).mount("#app");
