@@ -15,11 +15,25 @@ createApp({
         };
     },
 
-    mounted() {
-        this.atualizarVidaNoBancoDeDados(this.hero.life, this.enemy.life);
-    },
-
     methods: {
+
+        async atualizarVidaNoBancoDeDados(vidaHeroi, vidaVilao) {
+            try {
+                const response = await fetch(`${API_URL}/atualizarVida`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ vidaHeroi, vidaVilao })
+                });
+                if (!response.ok) {
+                    throw new Error('Erro ao atualizar a vida no banco de dados.');
+                }
+                console.log('Vida do herói e do vilão atualizada com sucesso.');
+            } catch (error) {
+                console.error('Erro ao atualizar a vida no banco de dados:', error);
+            }
+        },
 
         adicionarAoLog(mensagem) {
             if (this.battleLog.length >= this.battleLogLimit) {
@@ -123,25 +137,6 @@ createApp({
         isGameOver() {
             return this.hero.life <= 0 || this.enemy.life <= 0 || this.winner;
         },
-    },
-
-
-    async atualizarVidaNoBancoDeDados(vidaHeroi, vidaVilao) {
-        try {
-            const response = await fetch(`${API_URL}/atualizarVida`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ vidaHeroi, vidaVilao })
-            });
-            if (!response.ok) {
-                throw new Error('Erro ao atualizar a vida no banco de dados.');
-            }
-            console.log('Vida do herói e do vilão atualizada com sucesso.');
-        } catch (error) {
-            console.error('Erro ao atualizar a vida no banco de dados:', error);
-        }
     },
 
 }).mount("#app");

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Dashboard - Jogo Herói e Vilão</title>
     <link rel="stylesheet" href="dashboard-style.css">
 </head>
+
 <body>
     <div id="app" class="container">
         <h1>Dashboard</h1>
@@ -37,7 +39,7 @@
             methods: {
                 async fetchCharacterData() {
                     try {
-                        const response = await fetch('http://localhost:3000/characters'); // Substitua pela sua rota da API
+                        const response = await fetch('http://localhost:3000/characters');
                         const data = await response.json();
                         this.heroiVida = data.heroi.Vida;
                         this.vilaoVida = data.vilao.Vida;
@@ -49,4 +51,5 @@
         });
     </script>
 </body>
+
 </html>
