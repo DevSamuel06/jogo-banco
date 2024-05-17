@@ -1,0 +1,151 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('img/back.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #f8f8f2;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.health-bar {
+  background-color: #ff5555;
+  height: 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions button {
+  background-color: #373738;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: #6272a4;
+}
+
+.character {
+  width: 300px;
+  height: 300px;
+}
+
+.badge {
+  background-color: #ff5555;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 100%;
+}
+
+.log-box {
+  color: rgb(43, 37, 37);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  max-height: 200px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+.log-box h3 {
+  margin-top: 0;
+}
+
+.log-box ul {
+  padding-left: 20px;
+}
+
+
+.winner-box {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(43, 37, 37);
+  padding: 0px;
+  border-radius: 5px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.winner-box h2 {
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #505253;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #8f9294;
+}
+
+.button2{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2f8ab8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-color: #80aecc;
+}
+
+.green {
+  background-color: #4CAF50; 
+}
+
+.yellow {
+  background-color: #FFD700; 
+}
+
+.red {
+  background-color: #f44336; 
+}
+
+.dead {
+  background-color: #ff0000; 
+  
+}
