@@ -8,7 +8,7 @@ const ComponenteA = {
       <br><br>
       <button class="button" @click="entrar">Entrar</button>
       <br><br>
-      <button class="button" @click="$emit('alterar')">Fazer cadastro</button>
+      <p class="perg">Ainda não tem login? <a style="color:blue; cursor: pointer" @click="$emit('alterar')" >Cadastrar-se</a></p>
     </div>
   `,
   data() {
@@ -19,6 +19,7 @@ const ComponenteA = {
   },
   methods: {
     async entrar() {
+      window.alert("Um momento...")
       try {
         const response = await fetch('/login', {
           method: 'POST',
@@ -33,7 +34,7 @@ const ComponenteA = {
           localStorage.setItem('token', data.token);
           window.location.href = 'jogo.html';
         } else {
-          alert('Nome ou senha incorretos.');
+          alert('Falha ao tentar logar: Nome ou senha incorretos.');
         }
       } catch (error) {
         console.error('Erro ao fazer login:', error);
