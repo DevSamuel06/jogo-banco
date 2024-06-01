@@ -45,3 +45,17 @@ CREATE TABLE Personagens (
     Nome VARCHAR(255) PRIMARY KEY,
     Vida INT NOT NULL
 );
+```
+### Instalação do Backend
+1. Clone o repositório:
+```
+git clone https://github.com/seu-usuario/batalha-heroi-vilao.git
+```
+2. Navegue até o diretório do projeto:
+```
+cd batalha-heroi-vilao
+```
+Instale as dependências:
+```
+npm install
+```
