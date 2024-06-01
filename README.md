@@ -114,7 +114,7 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para ma
 
 # Demonstração da aplicação em funcionamento:
 
-[![Assista ao vídeo](https://youtu.be/gjdVGzzhOTY)
+https://youtu.be/gjdVGzzhOTY
 
 
 
