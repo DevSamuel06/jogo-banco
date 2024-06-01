@@ -94,3 +94,31 @@ Acesse o jogo em http://localhost:8080
 Use o dashboard para visualizar os logs de batalha em http://localhost:8080/dashboard
 ### Licença
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+## Aplicação
+
+Backend para salvar e consultar dados no banco de dados:
+![Captura de tela 2024-06-01 124343](https://github.com/DevSamuel06/jogo-banco/assets/124092317/7e62d71f-6a1e-4337-a5b8-21e71356a4eb)
+![Captura de tela 2024-06-01 124352](https://github.com/DevSamuel06/jogo-banco/assets/124092317/7ecfa543-c4ac-4c1c-8a3c-f211b996ac78)
+
+Sistema de login:
+![Captura de tela 2024-06-01 124420](https://github.com/DevSamuel06/jogo-banco/assets/124092317/9a0d182c-4015-45df-903e-1b2cfd16e857)
+![Captura de tela 2024-06-01 124429](https://github.com/DevSamuel06/jogo-banco/assets/124092317/3ba0f042-650e-4f83-aa82-f29a5ea25083)
+
+Salva os dados do jogo em tempo real:
+![Captura de tela 2024-06-01 124438](https://github.com/DevSamuel06/jogo-banco/assets/124092317/62935d4b-c8ef-46cb-8d5c-f2300e8a82f3)
+![Captura de tela 2024-06-01 124452](https://github.com/DevSamuel06/jogo-banco/assets/124092317/bd312385-efd9-4c4e-a583-8803d4bfbae4)
+
+Constrói o jogo :
+![Captura de tela 2024-06-01 124509](https://github.com/DevSamuel06/jogo-banco/assets/124092317/f34b5bee-929f-456e-8ac5-a6148b939bb4)
+
+
+
+
+
+
+
+
+
+
+
