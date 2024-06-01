@@ -55,7 +55,24 @@ git clone https://github.com/seu-usuario/batalha-heroi-vilao.git
 ```
 cd batalha-heroi-vilao
 ```
-Instale as dependências:
+3. Instale as dependências:
 ```
 npm install
+```
+4. Crie um arquivo config.js no diretório raiz do projeto com as credenciais do seu banco de dados:
+```
+const config = {
+    user: 'seu-usuario',
+    password: 'sua-senha',
+    server: 'seu-servidor.database.windows.net',
+    database: 'seu-banco-de-dados',
+    options: {
+        encrypt: true
+    }
+};
+module.exports = config;
+```
+5. Inicie o servidor:
+```
+node server.js
 ```
