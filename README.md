@@ -76,3 +76,21 @@ module.exports = config;
 ```
 node server.js
 ```
+### Instalação do Frontend
+1. Navegue até o diretório do frontend:
+```
+cd frontend
+```
+Instale as dependências:
+```
+npm install
+```
+Inicie o servidor de desenvolvimento:
+```
+npm run serve
+```
+### Utilização
+Acesse o jogo em http://localhost:8080
+Use o dashboard para visualizar os logs de batalha em http://localhost:8080/dashboard
+### Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
