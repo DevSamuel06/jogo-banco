@@ -97,20 +97,11 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para ma
 
 # Aplicação
 
-# Backend para salvar e consultar dados no banco de dados:
-![Captura de tela 2024-06-01 124343](https://github.com/DevSamuel06/jogo-banco/assets/124092317/7e62d71f-6a1e-4337-a5b8-21e71356a4eb)
-![Captura de tela 2024-06-01 124352](https://github.com/DevSamuel06/jogo-banco/assets/124092317/7ecfa543-c4ac-4c1c-8a3c-f211b996ac78)
+![Captura de tela 2024-06-03 192537](https://github.com/DevSamuel06/jogo-banco/assets/124092317/72f93e97-d63f-4f86-a43a-95af1aab37a6)
+![Captura de tela 2024-06-03 191531](https://github.com/DevSamuel06/jogo-banco/assets/124092317/87633ec6-91c1-441f-9038-d562e19df62f)
+![Captura de tela 2024-06-03 192616](https://github.com/DevSamuel06/jogo-banco/assets/124092317/aa6155b7-4ba4-47f2-8014-7950ff38b9b4)
+![Captura de tela 2024-06-03 192624](https://github.com/DevSamuel06/jogo-banco/assets/124092317/bfa254bd-c9ba-42b2-b35c-1640e3a13e69)
 
-## Sistema de login:
-![Captura de tela 2024-06-01 124420](https://github.com/DevSamuel06/jogo-banco/assets/124092317/9a0d182c-4015-45df-903e-1b2cfd16e857)
-![Captura de tela 2024-06-01 124429](https://github.com/DevSamuel06/jogo-banco/assets/124092317/3ba0f042-650e-4f83-aa82-f29a5ea25083)
-
-## Salva os dados do jogo em tempo real:
-![Captura de tela 2024-06-01 124438](https://github.com/DevSamuel06/jogo-banco/assets/124092317/62935d4b-c8ef-46cb-8d5c-f2300e8a82f3)
-![Captura de tela 2024-06-01 124452](https://github.com/DevSamuel06/jogo-banco/assets/124092317/bd312385-efd9-4c4e-a583-8803d4bfbae4)
-
-## Constrói o jogo :
-![Captura de tela 2024-06-01 124509](https://github.com/DevSamuel06/jogo-banco/assets/124092317/f34b5bee-929f-456e-8ac5-a6148b939bb4)
 
 # Demonstração da aplicação em funcionamento:
 
